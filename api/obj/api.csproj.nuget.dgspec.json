@@ -45,13 +45,43 @@
               "target": "Package",
               "version": "[13.2.1, )"
             },
+            "HotChocolate.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[13.2.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[13.2.1, )"
+            },
+            "HotChocolate.Types": {
+              "target": "Package",
+              "version": "[13.2.1, )"
+            },
+            "Keycloak.AuthServices.Authentication": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Keycloak.AuthServices.Authorization": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.7, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

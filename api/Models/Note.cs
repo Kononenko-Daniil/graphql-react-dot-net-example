@@ -5,16 +5,16 @@
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public List<string> Participants { get; set; }
+        public string CreatorId { get; set; }
 
         public Note() { }
 
-        public Note(int id, string title, string description, List<string> participants) 
+        public Note(int id, string title, string description, string creatorId) 
         {
             Id = id;
             Title = title;
             Description = description;
-            Participants = participants;
+            CreatorId = creatorId;
         }
     }
 }

@@ -10,38 +10,33 @@ namespace api.Queries
             {
                 new Note()
                 {
-                    Id = 1,
                     Title = "Test1",
                     Description = "Description1",
-                    Participants = new List<string>() { "Daniil", "Alex" }
+                    CreatorId = "01"
                 },
                 new Note()
                 {
-                    Id = 2,
                     Title = "Test2",
                     Description = "Description2",
-                    Participants = new List<string>() { "Artem", "Alex" }
+                    CreatorId = "02"
                 },
                 new Note()
                 {
-                    Id = 3,
                     Title = "Test3",
                     Description = "Description3",
-                    Participants = new List<string>() { "Daniil", "Max" }
+                    CreatorId = "03"
                 },
                 new Note()
                 {
-                    Id = 4,
                     Title = "Test4",
                     Description = "Description4",
-                    Participants = new List<string>() { "Ivan", "Max" }
+                    CreatorId = "04"
                 },
                 new Note()
                 {
-                    Id = 5,
                     Title = "Test5",
                     Description = "Description5",
-                    Participants = new List<string>() { "Daniil", "Ivan" }
+                    CreatorId = "05"
                 },
             };
 
@@ -55,7 +50,7 @@ namespace api.Queries
                 Id = 0,
                 Title = "Test0",
                 Description = "Description0",
-                Participants = new List<string>() { "Daniil" }
+                CreatorId = "---"
             };
 
             return note;
