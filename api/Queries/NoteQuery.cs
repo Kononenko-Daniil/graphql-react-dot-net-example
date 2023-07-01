@@ -1,6 +1,7 @@
 ﻿using api.Contexts;
 using api.Models;
 using HotChocolate.Authorization;
+using System.Security.Claims;
 
 namespace api.Queries
 {
@@ -17,8 +18,12 @@ namespace api.Queries
 
         [Authorize]
         [GraphQLName("noteById")]
-        public Note GetNoteById([Service] DataContext dbcontext, int id)
+        [UseServiceScope]
+        public Note GetNoteById([Service] DataContext dbcontext, 
+            [Service] IHttpContextAccessor contextAccessor, 
+            int id)
         {
+            var user = contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier); 
             var note = dbcontext.Notes.Where(x => x.Id == id).FirstOrDefault();
 
             if (note == null)
