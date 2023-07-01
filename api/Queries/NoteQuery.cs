@@ -23,7 +23,7 @@ namespace api.Queries
             [Service] IHttpContextAccessor contextAccessor, 
             int id)
         {
-            var user = contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            var userId = contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier); 
             var note = dbcontext.Notes.Where(x => x.Id == id).FirstOrDefault();
 
             if (note == null)
